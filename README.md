@@ -1,19 +1,9 @@
 # CastAssocReturnsStaleData
 
-**TODO: Add description**
+* a very simple testcase verifying observed behavior of Ecto returning stale data, when returning responses on updating associated data
 
-## Installation
+# To reproduce
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `cast_assoc_returns_stale_data` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [{:cast_assoc_returns_stale_data, "~> 0.1.0"}]
-end
-```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/cast_assoc_returns_stale_data](https://hexdocs.pm/cast_assoc_returns_stale_data).
-
+MIX_ENV=test mix ecto.create
+MIX_ENV=test mix ecto.migrate
+mix test
