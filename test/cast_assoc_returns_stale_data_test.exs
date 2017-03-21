@@ -62,7 +62,7 @@ defmodule CastAssocReturnsStaleDataTest do
   defp preload(q) do
     q
     |> Repo.preload(:left_location)
-    |> Repo.preload(left_location: :address)
+    |> Repo.preload([left_location: :address], force: true)
   end
 
 end
